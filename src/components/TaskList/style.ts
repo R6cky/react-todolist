@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
 export const TaskListStyled = styled.ul`
-  border: solid blue;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
+
+  h2 {
+    border: solid;
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;

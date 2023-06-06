@@ -33,7 +33,7 @@ export const CreateTaskStyled = styled.div`
   }
 
   form {
-    width: 50%;
+    width: 90%;
     max-width: 100%;
     height: 450px;
     border: solid red;

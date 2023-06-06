@@ -7,7 +7,7 @@ export const Task = ({ task, removeTaskList }: any) => {
         <h3>{task.title}</h3>
         <p>{task.description}</p>
       </div>
-      <span>Categoria</span>
+      <span>{task.category}</span>
       <span className="remove-btn" onClick={() => removeTaskList(task.id)}>
         remover
       </span>
