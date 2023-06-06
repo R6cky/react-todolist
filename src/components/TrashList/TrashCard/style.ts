@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TrashCardStyle = styled.li`
   width: 99%;
   max-width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,8 @@ export const TrashCardStyle = styled.li`
   .content-trash {
     width: 50%;
     max-width: 100%;
-    height: 80px;
+    height: 100px;
+    padding: 10px 5px 5px 10px;
 
     h3 {
       color: var(--words-color1);

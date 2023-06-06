@@ -35,13 +35,11 @@ export const TrashStyle = styled.div`
     height: 80px;
   }
 
-  .trash-header-title {
-    color: var(--words-color1);
-  }
   .clear-all {
     cursor: pointer;
     color: var(--words-color1);
     font-size: 16px;
+
     :hover {
       text-decoration: underline;
     }

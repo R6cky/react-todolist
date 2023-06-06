@@ -11,7 +11,6 @@ export const Trash = ({
     <TrashStyle>
       <div className="trash-container">
         <header className="trash-header">
-          <h3 className="trash-header-title">Lixeira</h3>
           <span className="clear-all" onClick={() => setTrashList([])}>
             Esvaziar lixeira
           </span>
