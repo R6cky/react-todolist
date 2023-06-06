@@ -5,7 +5,6 @@ import { MainStyled } from "./style";
 export const Main = ({
   openTaskModal,
   setIsModalTrashActive,
-  isModalTrashActive,
   taskList,
   removeTaskList,
 }: any) => {
