@@ -50,7 +50,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
           <option value="Financas">Financas</option>
         </select>
         <button className="button-create-task">Criar</button>
-        <input type="reset" />
+        <input className="reset-button" type="reset" />
       </form>
     </CreateTaskStyled>
   );

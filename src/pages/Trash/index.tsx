@@ -10,7 +10,7 @@ export const Trash = ({
   return (
     <TrashStyle>
       <header className="trash-header">
-        <h3>Lixeira</h3>
+        <h3 className="trash-header-title">Lixeira</h3>
         <span className="clear-all" onClick={() => setTrashList([])}>
           Esvaziar lixeira
         </span>
@@ -21,7 +21,12 @@ export const Trash = ({
           X
         </span>
       </header>
-      <TrashList trashList={trashList} restoreTrash={restoreTrash} />
+      <TrashList
+        trashList={trashList}
+        restoreTrash={restoreTrash}
+        setIsModalTrashActive={setIsModalTrashActive}
+        setTrashList={setTrashList}
+      />
     </TrashStyle>
   );
 };

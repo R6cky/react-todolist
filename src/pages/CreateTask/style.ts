@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const CreateTaskStyled = styled.div`
-  border: solid purple 3px;
   position: absolute;
   top: 0px;
   width: 100vw;
   height: 120%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding-top: 40px;
 
   .close-btn {
     width: 90%;
@@ -35,35 +35,46 @@ export const CreateTaskStyled = styled.div`
   form {
     width: 90%;
     max-width: 100%;
-    height: 450px;
+    height: 500px;
     border: solid red;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 50px;
 
     input {
       width: 90%;
       max-width: 100%;
       height: 40px;
+      font-size: 16px;
     }
 
     textarea {
       width: 90%;
       max-width: 100%;
       height: 80px;
+      font-size: 16px;
     }
 
     select {
       width: 90%;
       max-width: 100%;
       height: 40px;
+      cursor: pointer;
+      font-size: 16px;
     }
 
     .button-create-task {
       width: 90%;
       max-width: 100%;
       height: 40px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-button {
       cursor: pointer;
     }
   }
