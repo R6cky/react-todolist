@@ -28,6 +28,11 @@ export const TaskStyled = styled.li`
   }
   .task-category {
     color: var(--words-color1);
+    font-size: 11px;
+    border: solid var(--words-color1) 0.1px;
+    border-radius: 8px;
+
+    padding: 5px;
   }
 
   .remove-btn {
