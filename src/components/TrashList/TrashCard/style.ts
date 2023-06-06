@@ -9,9 +9,9 @@ export const TrashCardStyle = styled.li`
   align-items: center;
   padding: 0 20px;
   border-radius: 8px;
-  -webkit-box-shadow: -1px 6px 13px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: -1px 6px 13px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: -1px 6px 13px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 6px 13px 0px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: -1px 6px 13px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: -1px 6px 13px 0px rgba(255, 255, 255, 0.5);
 
   -webkit-animation: animation-default 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
@@ -33,6 +33,7 @@ export const TrashCardStyle = styled.li`
 
   .content-trash {
     width: 50%;
+    max-width: 100%;
     height: 80px;
 
     h3 {
@@ -41,10 +42,15 @@ export const TrashCardStyle = styled.li`
 
     p {
       color: var(--words-color1);
+      margin-bottom: 5px;
     }
 
     span {
       color: var(--words-color1);
+      font-size: 10px;
+      border: solid 0.2px;
+      border-radius: 8px;
+      padding: 5px;
     }
   }
 `;

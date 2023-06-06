@@ -18,6 +18,11 @@ export const TaskStyled = styled.li`
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   .header-todo {
+    width: 50%;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+
     .task-title {
       color: var(--words-color1);
     }
