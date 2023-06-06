@@ -31,6 +31,14 @@ export const TrashCardStyle = styled.li`
     height: 30px;
   }
 
+  .trash-category {
+    font-size: 11px;
+    color: var(--words-color1);
+    border: solid var(--words-color1) 0.2px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
   .content-trash {
     width: 50%;
     max-width: 100%;
