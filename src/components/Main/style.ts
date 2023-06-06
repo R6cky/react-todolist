@@ -36,9 +36,19 @@ export const MainStyled = styled.main`
     max-width: 100%;
     height: 100px;
 
-    .trash {
+    .trash-div {
       cursor: pointer;
       color: var(--words-color1);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .trash {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 `;

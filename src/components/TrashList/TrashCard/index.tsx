@@ -1,5 +1,5 @@
 import { TrashCardStyle } from "./style";
-
+import { MdRestore } from "react-icons/md";
 export const TrashCard = ({ card, restoreTrash }: any) => {
   return (
     <TrashCardStyle>
@@ -9,7 +9,9 @@ export const TrashCard = ({ card, restoreTrash }: any) => {
         <span>{card.category}</span>
       </div>
       <div className="trash-restore">
-        <span onClick={() => restoreTrash(card.id)}>Restaurar</span>
+        <span title="Restaurar item" onClick={() => restoreTrash(card.id)}>
+          <MdRestore className="restore" />
+        </span>
       </div>
     </TrashCardStyle>
   );

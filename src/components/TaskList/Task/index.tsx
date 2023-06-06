@@ -1,4 +1,5 @@
 import { TaskStyled } from "./style";
+import { BsTrash } from "react-icons/bs";
 
 export const Task = ({ task, removeTaskList }: any) => {
   return (
@@ -8,8 +9,12 @@ export const Task = ({ task, removeTaskList }: any) => {
         <p className="task-content">{task.description}</p>
       </div>
       <span className="task-category">{task.category}</span>
-      <span className="remove-btn" onClick={() => removeTaskList(task.id)}>
-        remover
+      <span
+        className="remove-btn"
+        onClick={() => removeTaskList(task.id)}
+        title={"Remover tarefa"}
+      >
+        <BsTrash className="trash" />
       </span>
     </TaskStyled>
   );

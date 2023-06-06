@@ -34,5 +34,8 @@ export const TaskListStyled = styled.ul`
     font-size: 2rem;
     font-weight: bold;
     color: var(--words-color1);
+    -webkit-animation: animation-default 1.2s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 `;

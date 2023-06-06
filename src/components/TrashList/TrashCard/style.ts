@@ -20,6 +20,15 @@ export const TrashCardStyle = styled.li`
   .trash-restore {
     cursor: pointer;
     color: var(--words-color1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .restore {
+    width: 30px;
+    height: 30px;
   }
 
   .content-trash {
