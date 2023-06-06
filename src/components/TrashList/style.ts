@@ -14,7 +14,7 @@ export const TrashListStyle = styled.ul`
   gap: 20px;
   padding: 20px 0 50px 0;
   background-color: var(--primary-color);
-  overflow-y: scroll;
+
   -webkit-animation: animation-default 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
