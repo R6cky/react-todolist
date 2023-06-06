@@ -14,8 +14,11 @@ export const Main = ({
       <Header />
       <div className="header-area">
         <div className="header-todo">
-          <h2>Cria nova lista</h2>
-          <span className="add-task-button" onClick={openTaskModal}>
+          <span
+            className="add-task-button"
+            onClick={openTaskModal}
+            title="Criar nova lista"
+          >
             <p>+</p>
           </span>
         </div>
