@@ -24,7 +24,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
         <input
           type="text"
           placeholder="Título da tarefa"
-          onInput={(e) => {
+          onInput={(e: any) => {
             setDataTask({ ...dataTask, title: e.target.value });
           }}
         />
@@ -32,7 +32,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
           name=""
           id=""
           placeholder="Descrição da tarefa"
-          onInput={(e) =>
+          onInput={(e: any) =>
             setDataTask({ ...dataTask, description: e.target.value })
           }
         ></textarea>
