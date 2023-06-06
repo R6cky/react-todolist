@@ -22,6 +22,7 @@ export const TaskStyled = styled.li`
     max-width: 100%;
     display: flex;
     align-items: flex-start;
+    justify-content: left;
 
     .task-title {
       color: var(--words-color1);
