@@ -9,10 +9,23 @@ export const MainStyled = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    h2 {
+      color: var(--words-color1);
+    }
   }
 
   .add-task-button {
     cursor: pointer;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--words-color1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
   }
 
   .header-area {
@@ -25,6 +38,7 @@ export const MainStyled = styled.main`
 
     .trash {
       cursor: pointer;
+      color: var(--words-color1);
     }
   }
 `;

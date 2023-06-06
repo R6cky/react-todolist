@@ -12,23 +12,35 @@ export const TrashStyle = styled.div`
   align-items: center;
   padding-top: 40px;
 
+  .trash-container {
+    width: 90%;
+    max-width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+    background-color: var(--primary-color);
+  }
+
   .trash-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    border: solid white;
     width: 90%;
     max-width: 100%;
-    height: 50px;
+    height: 80px;
   }
 
   .trash-header-title {
-    color: white;
+    color: var(--words-color1);
   }
   .clear-all {
     cursor: pointer;
-    color: white;
+    color: var(--words-color1);
     font-size: 16px;
   }
 
@@ -41,5 +53,8 @@ export const TrashStyle = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    font-size: 22px;
+    background-color: var(--words-color1);
+    color: var(--primary-color);
   }
 `;

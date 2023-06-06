@@ -5,7 +5,9 @@ import { TaskListStyled } from "./style";
 export const TaskList = ({ taskList, removeTaskList }: any) => {
   return (
     <TaskListStyled>
-      <h2>Minha lista</h2>
+      <li className="my-list-title">
+        <h2>Minha lista</h2>
+      </li>
       {taskList.length > 0 ? (
         taskList.map((task: iTasksWithId) => {
           return (
@@ -13,7 +15,9 @@ export const TaskList = ({ taskList, removeTaskList }: any) => {
           );
         })
       ) : (
-        <p className="void-list">Lista vazia</p>
+        <li>
+          <p className="void-list">Lista vazia</p>
+        </li>
       )}
     </TaskListStyled>
   );

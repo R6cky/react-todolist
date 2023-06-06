@@ -15,7 +15,33 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color:#95cadb ;
+    background-color:var(--primary-color) ;
+  }
+
+
+  :root{
+    --primary-color:#1c0f0e;
+    --shadow-tasks:#c5bd99;
+    --words-color1:#c5bd99;
+    --radius-default:8px;
+    
+  }
+
+  @-webkit-keyframes animation-default {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 `;

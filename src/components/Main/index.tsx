@@ -15,7 +15,7 @@ export const Main = ({
         <div className="header-todo">
           <h2>Welcome, user!</h2>
           <span className="add-task-button" onClick={openTaskModal}>
-            +
+            <p>+</p>
           </span>
         </div>
         <div className="trash" onClick={() => setIsModalTrashActive(true)}>

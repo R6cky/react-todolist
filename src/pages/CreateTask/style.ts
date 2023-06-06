@@ -24,11 +24,12 @@ export const CreateTaskStyled = styled.div`
       height: 40px;
       font-size: 22px;
       font-weight: bold;
-      background-color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      background-color: var(--words-color1);
+      color: var(--primary-color);
     }
   }
 
@@ -36,19 +37,25 @@ export const CreateTaskStyled = styled.div`
     width: 90%;
     max-width: 100%;
     height: 500px;
-    border: solid red;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 50px;
+    background-color: var(--primary-color);
+
+    -webkit-animation: animation-default 1.2s
+      cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
     input {
       width: 90%;
       max-width: 100%;
       height: 40px;
       font-size: 16px;
+      background-color: var(--words-color1);
+      padding: 5px;
     }
 
     textarea {
@@ -56,6 +63,8 @@ export const CreateTaskStyled = styled.div`
       max-width: 100%;
       height: 80px;
       font-size: 16px;
+      background-color: var(--words-color1);
+      padding: 5px;
     }
 
     select {
@@ -64,6 +73,8 @@ export const CreateTaskStyled = styled.div`
       height: 40px;
       cursor: pointer;
       font-size: 16px;
+      background-color: var(--words-color1);
+      padding: 5px;
     }
 
     .button-create-task {
@@ -72,6 +83,7 @@ export const CreateTaskStyled = styled.div`
       height: 40px;
       cursor: pointer;
       font-size: 16px;
+      background-color: var(--words-color1);
     }
 
     .reset-button {

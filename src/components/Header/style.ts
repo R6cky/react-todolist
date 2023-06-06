@@ -14,5 +14,6 @@ export const HeaderStyled = styled.header`
   h1 {
     text-align: center;
     font-size: 2.5rem;
+    color: var(--words-color1);
   }
 `;
