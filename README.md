@@ -1,4 +1,5 @@
 # react-todolist
+#Tecnologia utilizada: React JS
 
 ##Nesse projeto, contrui uma aplicação de lista de tarefas, onde o usuário 
 ##poderá criar tarefas através de uma interface bem interativa.
