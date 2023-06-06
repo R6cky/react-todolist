@@ -46,8 +46,8 @@ export const MainStyled = styled.main`
       align-items: center;
 
       .trash {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
       }
     }
   }

@@ -42,18 +42,22 @@ export const TrashStyle = styled.div`
     cursor: pointer;
     color: var(--words-color1);
     font-size: 16px;
+    :hover {
+      text-decoration: underline;
+    }
   }
 
   .close-trash-modal {
-    cursor: pointer;
     width: 40px;
     height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 22px;
     background-color: var(--words-color1);
     color: var(--primary-color);
   }

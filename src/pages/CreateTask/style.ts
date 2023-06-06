@@ -56,6 +56,7 @@ export const CreateTaskStyled = styled.div`
       font-size: 16px;
       background-color: var(--words-color1);
       padding: 5px;
+      border-radius: 4px;
     }
 
     textarea {
@@ -65,6 +66,7 @@ export const CreateTaskStyled = styled.div`
       font-size: 16px;
       background-color: var(--words-color1);
       padding: 5px;
+      border-radius: 4px;
     }
 
     select {
@@ -75,6 +77,7 @@ export const CreateTaskStyled = styled.div`
       font-size: 16px;
       background-color: var(--words-color1);
       padding: 5px;
+      border-radius: 4px;
     }
 
     .button-create-task {
@@ -84,6 +87,7 @@ export const CreateTaskStyled = styled.div`
       cursor: pointer;
       font-size: 16px;
       background-color: var(--words-color1);
+      border-radius: 4px;
     }
 
     .reset-button {

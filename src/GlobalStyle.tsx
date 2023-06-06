@@ -23,8 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     --primary-color:#1c0f0e;
     --shadow-tasks:#c5bd99;
     --words-color1:#c5bd99;
-    --radius-default:8px;
-    
+   
   }
 
   @-webkit-keyframes animation-default {
