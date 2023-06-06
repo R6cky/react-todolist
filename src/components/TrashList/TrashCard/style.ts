@@ -32,7 +32,7 @@ export const TrashCardStyle = styled.li`
   }
 
   .trash-category {
-    font-size: 11px;
+    font-size: 9px;
     color: var(--words-color1);
     border: solid var(--words-color1) 0.2px;
     padding: 5px;
