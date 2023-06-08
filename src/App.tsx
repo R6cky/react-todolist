@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { Main } from "./components/Main";
 import { CreateTask } from "./pages/CreateTask";
