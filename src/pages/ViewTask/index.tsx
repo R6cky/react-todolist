@@ -1,21 +1,21 @@
 import { ViewTaskStyle } from "./style";
 
-export const ViewTask = ({ setIsModalViewActive }: any) => {
+export const ViewTask = ({ setIsModalViewActive, taskData }: any) => {
   return (
     <ViewTaskStyle>
-      <div className="trash-container">
-        <header className="trash-header">
+      <div className="view-container">
+        <header className="view-header">
           <span
-            className="close-trash-modal"
+            className="close-view-modal"
             onClick={() => setIsModalViewActive(false)}
           >
             X
           </span>
         </header>
         <div className="content-Card">
-          <h3>t</h3>
-          <p>d</p>
-          <span>c</span>
+          <h3>{taskData[0].title}</h3>
+          <p>{taskData[0].description}</p>
+          <span>{taskData[0].category}</span>
         </div>
       </div>
     </ViewTaskStyle>

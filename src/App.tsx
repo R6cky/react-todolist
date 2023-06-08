@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { Component, useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { Main } from "./components/Main";
 import { CreateTask } from "./pages/CreateTask";
 import { iTasksWithId, tTasks } from "./interfaces/interfaces";
 import { v4 as uuidv4 } from "uuid";
 import { Trash } from "./pages/Trash";
-import { ViewTask } from "./pages/ViewTask";
 import { ClearTrash } from "./pages/ClearTrash";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,6 +21,7 @@ function App() {
 
   const [taskList, setTaskList] = useState([] as Array<iTasksWithId>);
   const [trashList, setTrashList] = useState([] as Array<iTasksWithId>);
+  const [taskData, setTaskData] = useState([] as Array<iTasksWithId>);
 
   const openTaskModal = (): void => {
     if (!isModalTaskActive) {
@@ -78,6 +78,14 @@ function App() {
     }
   };
 
+  const viewTask = (id: string): void => {
+    const task: Array<iTasksWithId> = taskList.filter((elem) => {
+      return elem.id === id;
+    });
+    setTaskData(task);
+    setIsModalViewActive(true);
+  };
+
   return (
     <div>
       <GlobalStyle />
@@ -91,6 +99,8 @@ function App() {
         removeTaskList={removeTaskList}
         setIsModalViewActive={setIsModalViewActive}
         isModalViewActive={isModalViewActive}
+        viewTask={viewTask}
+        taskData={taskData}
       />
       {isModalTaskActive && (
         <CreateTask openTaskModal={openTaskModal} addTasks={addTasks} />
@@ -105,9 +115,6 @@ function App() {
         />
       )}
 
-      {isModalViewActive && (
-        <ViewTask setIsModalViewActive={setIsModalViewActive} />
-      )}
       {isModalClearTrashActive && (
         <ClearTrash
           setIsModalClearTrashActive={setIsModalClearTrashActive}

@@ -7,6 +7,8 @@ export const TaskList = ({
   removeTaskList,
   setIsModalViewActive,
   isModalViewActive,
+  viewTask,
+  taskData,
 }: any) => {
   return (
     <TaskListStyled>
@@ -23,6 +25,8 @@ export const TaskList = ({
               setIsModalViewActive={setIsModalViewActive}
               isModalViewActive={isModalViewActive}
               taskList={taskList}
+              viewTask={viewTask}
+              taskData={taskData}
             />
           );
         })

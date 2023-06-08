@@ -1,8 +1,16 @@
 import { TaskStyled } from "./style";
 import { BsTrash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
+import { ViewTask } from "../../../pages/ViewTask";
 
-export const Task = ({ task, removeTaskList, setIsModalViewActive }: any) => {
+export const Task = ({
+  task,
+  removeTaskList,
+  setIsModalViewActive,
+  isModalViewActive,
+  viewTask,
+  taskData,
+}: any) => {
   return (
     <TaskStyled>
       <div className="header-todo">
@@ -13,7 +21,7 @@ export const Task = ({ task, removeTaskList, setIsModalViewActive }: any) => {
       <span
         title="Clique para visualizar a tarefa"
         className="task-view"
-        onClick={() => setIsModalViewActive(true)}
+        onClick={() => viewTask(task.id)}
       >
         <BsEye className="task-view-icon" />
       </span>
@@ -24,6 +32,12 @@ export const Task = ({ task, removeTaskList, setIsModalViewActive }: any) => {
       >
         <BsTrash className="trash" />
       </span>
+      {isModalViewActive && (
+        <ViewTask
+          taskData={taskData}
+          setIsModalViewActive={setIsModalViewActive}
+        />
+      )}
     </TaskStyled>
   );
 };

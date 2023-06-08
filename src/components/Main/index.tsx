@@ -10,6 +10,8 @@ export const Main = ({
   removeTaskList,
   setIsModalViewActive,
   isModalViewActive,
+  viewTask,
+  taskData,
 }: any) => {
   return (
     <MainStyled>
@@ -37,6 +39,8 @@ export const Main = ({
         removeTaskList={removeTaskList}
         setIsModalViewActive={setIsModalViewActive}
         isModalViewActive={isModalViewActive}
+        viewTask={viewTask}
+        taskData={taskData}
       ></TaskList>
     </MainStyled>
   );

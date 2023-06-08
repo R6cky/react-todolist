@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ViewTaskStyle = styled.div`
   position: absolute;
   top: 0px;
+  left: 0px;
   width: 100vw;
   height: 120%;
   background-color: rgba(0, 0, 0, 0.9);
@@ -12,7 +13,7 @@ export const ViewTaskStyle = styled.div`
   align-items: center;
   padding-top: 40px;
 
-  .trash-container {
+  .view-container {
     width: 80%;
     max-width: 100%;
     height: 500px;
@@ -26,13 +27,15 @@ export const ViewTaskStyle = styled.div`
   }
 
   .content-Card {
-    border: solid red;
+    border: solid var(--words-color1) 0.2px;
+    border-radius: 8px;
     width: 90%;
     height: 300px;
+    color: var(--words-color1);
+    padding: 20px;
   }
 
-  .trash-header {
-    border: solid red;
+  .view-header {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -42,7 +45,7 @@ export const ViewTaskStyle = styled.div`
     height: 80px;
   }
 
-  .close-trash-modal {
+  .close-view-modal {
     width: 40px;
     height: 40px;
     font-size: 22px;
