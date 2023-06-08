@@ -5,13 +5,21 @@ import { CreateTask } from "./pages/CreateTask";
 import { iTasksWithId, tTasks } from "./interfaces/interfaces";
 import { v4 as uuidv4 } from "uuid";
 import { Trash } from "./pages/Trash";
-//import { RoutesMain } from "./routes/RoutesMain";
+import { ViewTask } from "./pages/ViewTask";
+import { ClearTrash } from "./pages/ClearTrash";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [isModalTaskActive, setIsModalTaskActive] = useState(false as boolean);
   const [isModalTrashActive, setIsModalTrashActive] = useState(
     false as boolean
   );
+  const [isModalClearTrashActive, setIsModalClearTrashActive] = useState(
+    false as boolean
+  );
+  const [isModalViewActive, setIsModalViewActive] = useState(false as boolean);
+
   const [taskList, setTaskList] = useState([] as Array<iTasksWithId>);
   const [trashList, setTrashList] = useState([] as Array<iTasksWithId>);
 
@@ -52,6 +60,24 @@ function App() {
     setTrashList(restored);
   };
 
+  const clearAllTrash = () => {
+    setTrashList([]);
+    setIsModalClearTrashActive(false);
+    if (trashList.length > 0) {
+      toast.success(`Itens excluídos com sucesso!`, {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1000,
+        theme: "dark",
+      });
+    } else {
+      toast.error(`Impossível excluir itens. Sua lista já está vazia!`, {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 2000,
+        theme: "dark",
+      });
+    }
+  };
+
   return (
     <div>
       <GlobalStyle />
@@ -63,6 +89,8 @@ function App() {
         openTaskModal={openTaskModal}
         taskList={taskList}
         removeTaskList={removeTaskList}
+        setIsModalViewActive={setIsModalViewActive}
+        isModalViewActive={isModalViewActive}
       />
       {isModalTaskActive && (
         <CreateTask openTaskModal={openTaskModal} addTasks={addTasks} />
@@ -72,10 +100,22 @@ function App() {
         <Trash
           setIsModalTrashActive={setIsModalTrashActive}
           trashList={trashList}
-          setTrashList={setTrashList}
           restoreTrash={restoreTrash}
+          setIsModalClearTrashActive={setIsModalClearTrashActive}
         />
       )}
+
+      {isModalViewActive && (
+        <ViewTask setIsModalViewActive={setIsModalViewActive} />
+      )}
+      {isModalClearTrashActive && (
+        <ClearTrash
+          setIsModalClearTrashActive={setIsModalClearTrashActive}
+          clearAllTrash={clearAllTrash}
+        />
+      )}
+
+      <ToastContainer />
     </div>
   );
 }

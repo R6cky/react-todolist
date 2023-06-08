@@ -6,12 +6,16 @@ export const Trash = ({
   trashList,
   setTrashList,
   restoreTrash,
+  setIsModalClearTrashActive,
 }: any) => {
   return (
     <TrashStyle>
       <div className="trash-container">
         <header className="trash-header">
-          <span className="clear-all" onClick={() => setTrashList([])}>
+          <span
+            className="clear-all"
+            onClick={() => setIsModalClearTrashActive(true)}
+          >
             Esvaziar lixeira
           </span>
           <span

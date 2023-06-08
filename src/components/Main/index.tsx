@@ -8,6 +8,8 @@ export const Main = ({
   setIsModalTrashActive,
   taskList,
   removeTaskList,
+  setIsModalViewActive,
+  isModalViewActive,
 }: any) => {
   return (
     <MainStyled>
@@ -30,7 +32,12 @@ export const Main = ({
           <BsTrash className="trash" />
         </div>
       </div>
-      <TaskList taskList={taskList} removeTaskList={removeTaskList}></TaskList>
+      <TaskList
+        taskList={taskList}
+        removeTaskList={removeTaskList}
+        setIsModalViewActive={setIsModalViewActive}
+        isModalViewActive={isModalViewActive}
+      ></TaskList>
     </MainStyled>
   );
 };

@@ -34,13 +34,21 @@ export const TaskStyled = styled.li`
   }
   .task-category {
     color: var(--words-color1);
-    font-size: 11px;
+    font-size: 9px;
     border: solid var(--words-color1) 0.1px;
     border-radius: 8px;
-
     padding: 5px;
   }
 
+  .task-view {
+    color: var(--words-color1);
+    cursor: pointer;
+
+    .task-view-icon {
+      width: 30px;
+      height: 25px;
+    }
+  }
   .remove-btn {
     cursor: pointer;
     color: var(--words-color1);
