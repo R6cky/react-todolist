@@ -1,49 +1,58 @@
 import { useState } from "react";
 import { CreateTaskStyled } from "./style";
 import { tTasks } from "../../interfaces/interfaces";
-
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
+import { createTaskSchema } from "../../interfaces/interfaces";
 export const CreateTask = ({ openTaskModal, addTasks }: any) => {
-  const [dataTask, setDataTask] = useState({
-    title: "",
-    description: "",
-    category: "",
-  } as tTasks);
+  // const [dataTask, setDataTask] = useState({
+  //   title: "",
+  //   description: "",
+  //   category: "",
+  // } as tTasks);
 
-  const submit = (e: any): void => {
-    e.preventDefault();
-    addTasks(dataTask);
-    openTaskModal();
+  // const submit = (e: any): void => {
+  //   e.preventDefault();
+  //   addTasks(dataTask);
+  //   openTaskModal();
+  // };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(createTaskSchema),
+  });
+
+  const createTask = (data: any) => {
+    console.log(data);
   };
 
   return (
     <CreateTaskStyled>
-      <form action="" onSubmit={submit}>
+      <form action="" onSubmit={handleSubmit(createTask)}>
         <div className="close-btn" onClick={openTaskModal}>
           <span>X</span>
         </div>
         <input
           type="text"
           placeholder="Título da tarefa"
-          onInput={(e: any) => {
-            setDataTask({ ...dataTask, title: e.target.value });
-          }}
+          {...register("title")}
         />
+        {errors.title && <span>{errors.title.message}</span>}
         <textarea
-          name=""
           id=""
           placeholder="Descrição da tarefa"
-          onInput={(e: any) =>
-            setDataTask({ ...dataTask, description: e.target.value })
-          }
+          {...register("content")}
         ></textarea>
-        <select
-          defaultValue="Lazer"
-          name=""
-          id=""
-          onChange={(e) =>
-            setDataTask({ ...dataTask, category: e.target.value })
-          }
-        >
+        {errors.content && (
+          <span className="error-message">{errors.content.message}</span>
+        )}
+        <select {...register("category")} defaultValue="Lazer" name="" id="">
+          {errors.category && (
+            <span className="error-message">{errors.content.message}</span>
+          )}
           <option value="Lazer">Lazer</option>
           <option value="Produtividade">Produtividade</option>
           <option value="Alimentacao">Alimentacao</option>
