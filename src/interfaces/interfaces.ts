@@ -23,3 +23,5 @@ export const createTaskSchema = z.object({
     .max(50, "Valor máximo permitido: 50 caracteters"),
   category: z.string().nonempty("Categoria obrigatória"),
 });
+
+export type createTaskFormData = z.infer<typeof createTaskSchema>;

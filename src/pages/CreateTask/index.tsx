@@ -4,6 +4,8 @@ import { tTasks } from "../../interfaces/interfaces";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 import { createTaskSchema } from "../../interfaces/interfaces";
+import { createTaskFormData } from "../../interfaces/interfaces";
+
 export const CreateTask = ({ openTaskModal, addTasks }: any) => {
   // const [dataTask, setDataTask] = useState({
   //   title: "",
@@ -21,7 +23,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<createTaskFormData>({
     resolver: zodResolver(createTaskSchema),
   });
 
@@ -40,7 +42,9 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
           placeholder="Título da tarefa"
           {...register("title")}
         />
-        {errors.title && <span>{errors.title.message}</span>}
+        {errors.title && (
+          <span className="error-message">{errors.title.message}</span>
+        )}
         <textarea
           id=""
           placeholder="Descrição da tarefa"
@@ -51,7 +55,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
         )}
         <select {...register("category")} defaultValue="Lazer" name="" id="">
           {errors.category && (
-            <span className="error-message">{errors.content.message}</span>
+            <span className="error-message">{errors.category.message}</span>
           )}
           <option value="Lazer">Lazer</option>
           <option value="Produtividade">Produtividade</option>

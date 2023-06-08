@@ -90,6 +90,10 @@ export const CreateTaskStyled = styled.div`
       border-radius: 4px;
     }
 
+    .error-message {
+      color: var(--words-color1);
+    }
+
     .reset-button {
       cursor: pointer;
     }
