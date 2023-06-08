@@ -1,12 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { CreateTaskStyled } from "./style";
-import { tTasks } from "../../interfaces/interfaces";
+// import { tTasks } from "../../interfaces/interfaces";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 import { createTaskSchema } from "../../interfaces/interfaces";
 import { createTaskFormData } from "../../interfaces/interfaces";
 
-export const CreateTask = ({ openTaskModal, addTasks }: any) => {
+export const CreateTask = ({ openTaskModal }: any) => {
   // const [dataTask, setDataTask] = useState({
   //   title: "",
   //   description: "",
