@@ -14,7 +14,7 @@ export const ViewTask = ({ setIsModalViewActive, taskData }: any) => {
         </header>
         <div className="content-Card">
           <h3>{taskData[0].title}</h3>
-          <p>{taskData[0].description}</p>
+          <p>{taskData[0].content}</p>
           <span>{taskData[0].category}</span>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const TrashCard = ({ card, restoreTrash }: any) => {
     <TrashCardStyle>
       <div className="content-trash">
         <h3 className="trash-title">{card.title}</h3>
-        <p className="trash-content">{card.description}</p>
+        <p className="trash-content">{card.content}</p>
       </div>
       <span className="trash-category">{card.category}</span>
       <div className="trash-restore">

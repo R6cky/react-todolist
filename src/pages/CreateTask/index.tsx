@@ -1,24 +1,11 @@
 // import { useState } from "react";
 import { CreateTaskStyled } from "./style";
-// import { tTasks } from "../../interfaces/interfaces";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 import { createTaskSchema } from "../../interfaces/interfaces";
 import { createTaskFormData } from "../../interfaces/interfaces";
 
-export const CreateTask = ({ openTaskModal }: any) => {
-  // const [dataTask, setDataTask] = useState({
-  //   title: "",
-  //   description: "",
-  //   category: "",
-  // } as tTasks);
-
-  // const submit = (e: any): void => {
-  //   e.preventDefault();
-  //   addTasks(dataTask);
-  //   openTaskModal();
-  // };
-
+export const CreateTask = ({ openTaskModal, addTasks }: any) => {
   const {
     register,
     handleSubmit,
@@ -28,7 +15,8 @@ export const CreateTask = ({ openTaskModal }: any) => {
   });
 
   const createTask = (data: any) => {
-    console.log(data);
+    addTasks(data);
+    openTaskModal();
   };
 
   return (

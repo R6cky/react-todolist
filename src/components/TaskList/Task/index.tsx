@@ -15,7 +15,7 @@ export const Task = ({
     <TaskStyled>
       <div className="header-todo">
         <h3 className="task-title">{task.title}</h3>
-        <p className="task-content">{task.description}</p>
+        <p className="task-content">{task.content}</p>
       </div>
       <span className="task-category">{task.category}</span>
       <span
