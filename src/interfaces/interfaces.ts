@@ -2,12 +2,29 @@ import { z } from "zod";
 
 export type tTasks = {
   title: string;
-  description: string;
+  content: string;
   category: string;
 };
 
 export interface iTasksWithId extends tTasks {
   id: string;
+}
+
+export interface iTaskProps {
+  task: iTasksWithId;
+  removeTaskList: any;
+  setIsModalViewActive: boolean;
+  isModalViewActive: boolean;
+  viewTask: any;
+  taskData: iTasksWithId;
+}
+export interface iTaskListProps {
+  taskList: Array<iTasksWithId>;
+  removeTaskList: any;
+  setIsModalViewActive: boolean;
+  isModalViewActive: boolean;
+  viewTask: any;
+  taskData: iTasksWithId;
 }
 
 export const createTaskSchema = z.object({
