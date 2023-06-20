@@ -2,7 +2,6 @@ import { TaskStyled } from "./style";
 import { BsTrash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { ViewTask } from "../../../pages/ViewTask";
-import { iTaskProps } from "../../../interfaces/interfaces";
 
 export const Task = ({
   task,

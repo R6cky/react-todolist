@@ -1,4 +1,4 @@
-import { iTaskListProps, iTasksWithId } from "../../interfaces/interfaces";
+import { iTasksWithId } from "../../interfaces/interfaces";
 import { Task } from "./Task";
 import { TaskListStyled } from "./style";
 
