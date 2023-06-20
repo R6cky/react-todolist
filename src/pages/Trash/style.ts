@@ -5,7 +5,7 @@ export const TrashStyle = styled.div`
   top: 0px;
   width: 100vw;
   height: 120%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: start;

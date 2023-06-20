@@ -5,12 +5,15 @@ export const ClearTrashStyle = styled.div`
   top: 0px;
   width: 100vw;
   height: 120%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   padding-top: 70px;
+  -webkit-animation: animation-default 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   .clear-container {
     width: 20rem;
