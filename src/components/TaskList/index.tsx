@@ -9,7 +9,7 @@ export const TaskList = ({
   isModalViewActive,
   viewTask,
   taskData,
-}: iTaskListProps) => {
+}: any) => {
   return (
     <TaskListStyled>
       <li className="my-list-title">

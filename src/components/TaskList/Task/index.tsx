@@ -11,7 +11,7 @@ export const Task = ({
   isModalViewActive,
   viewTask,
   taskData,
-}: iTaskProps) => {
+}: any) => {
   return (
     <TaskStyled>
       <div className="header-todo">
