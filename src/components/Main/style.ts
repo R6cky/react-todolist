@@ -32,6 +32,7 @@ export const MainStyled = styled.main`
     width: 11rem;
     max-width: 100%;
     height: 2rem;
+    max-height: 100%;
     border-radius: 4px;
     padding: 4px;
     font-size: 16px;
