@@ -6,7 +6,7 @@ export const ViewTaskStyle = styled.div`
   left: 0px;
   width: 100vw;
   height: 120%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -32,7 +32,20 @@ export const ViewTaskStyle = styled.div`
     width: 90%;
     height: 300px;
     color: var(--words-color1);
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span {
+      width: 60px;
+      max-width: 100%;
+      height: 1.5rem;
+      border-radius: 4px;
+      border: solid 0.2px var(--words-color1);
+      padding: 4px;
+      font-size: 12px;
+    }
   }
 
   .view-header {

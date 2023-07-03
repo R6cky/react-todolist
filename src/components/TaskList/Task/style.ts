@@ -27,10 +27,15 @@ export const TaskStyled = styled.li`
   .input-checkbox {
     width: 50px;
     height: 30px;
+
     input {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.4rem;
+      height: 1.4rem;
       cursor: pointer;
+
+      :-ms-input-placeholder {
+        background: red;
+      }
     }
   }
 
