@@ -26,6 +26,10 @@ export const Main = ({
             <p>+</p>
           </span>
         </div>
+        <select className="select-list" name="" id="">
+          <option value="">Tarefas feitas</option>
+          <option value="">Tarefas pendentes</option>
+        </select>
         <div
           className="trash-div"
           title={"lixeira"}

@@ -5,7 +5,7 @@ export const TaskStyled = styled.li`
   max-width: 100%;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
   border-radius: 8px;
@@ -16,6 +16,23 @@ export const TaskStyled = styled.li`
   -webkit-animation: animation-default 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  .task-container {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .input-checkbox {
+    width: 50px;
+    height: 30px;
+    input {
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+    }
+  }
 
   .header-todo {
     width: 50%;

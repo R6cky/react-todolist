@@ -28,6 +28,26 @@ export const MainStyled = styled.main`
     padding-bottom: 2px;
   }
 
+  .select-list {
+    width: 11rem;
+    max-width: 100%;
+    height: 2rem;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--words-color1);
+    cursor: pointer;
+    border: solid 0.2px;
+
+    option {
+      background-color: var(--primary-color);
+      color: var(--words-color1);
+      width: 9rem;
+      height: 2rem;
+    }
+  }
+
   .header-area {
     display: flex;
     justify-content: space-around;
