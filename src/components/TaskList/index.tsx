@@ -9,6 +9,7 @@ export const TaskList = ({
   isModalViewActive,
   viewTask,
   taskData,
+  taskComplete,
 }: any) => {
   return (
     <TaskListStyled>
@@ -27,6 +28,7 @@ export const TaskList = ({
               taskList={taskList}
               viewTask={viewTask}
               taskData={taskData}
+              taskComplete={taskComplete}
             />
           );
         })

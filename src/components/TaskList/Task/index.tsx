@@ -10,12 +10,24 @@ export const Task = ({
   isModalViewActive,
   viewTask,
   taskData,
+  taskComplete,
 }: any) => {
   return (
     <TaskStyled>
-      <div className="task-container">
+      <div
+        className="task-container"
+        style={{
+          textDecoration: task.isDone ? "line-through" : "",
+          opacity: task.isDone ? "0.5" : "1",
+        }}
+      >
         <div className="input-checkbox">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            onChange={() => taskComplete(task.id)}
+          />
         </div>
         <div className="header-todo">
           <h3 className="task-title">{task.title}</h3>

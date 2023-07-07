@@ -24,6 +24,12 @@ export const TaskStyled = styled.li`
     justify-content: space-around;
     align-items: center;
   }
+
+  .task-complete {
+    opacity: 0.3;
+    text-decoration: line-through;
+  }
+
   .input-checkbox {
     width: 50px;
     height: 30px;

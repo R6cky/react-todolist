@@ -32,7 +32,7 @@ function App() {
   };
 
   const addTasks = (data: tTasks): void => {
-    const newDataTask: iTasksWithId = { ...data, id: uuidv4() };
+    const newDataTask: iTasksWithId = { ...data, isDone: false, id: uuidv4() };
     setTaskList([...taskList, newDataTask]);
   };
 
@@ -82,8 +82,18 @@ function App() {
     const task: Array<iTasksWithId> = taskList.filter((elem) => {
       return elem.id === id;
     });
+
     setTaskData(task);
     setIsModalViewActive(true);
+  };
+
+  const taskComplete = (id: string) => {
+    const newTasks = [...taskList];
+    newTasks.map((task) =>
+      task.id === id ? (task.isDone = !task.isDone) : task
+    );
+
+    setTaskList(newTasks);
   };
 
   return (
@@ -101,6 +111,7 @@ function App() {
         isModalViewActive={isModalViewActive}
         viewTask={viewTask}
         taskData={taskData}
+        taskComplete={taskComplete}
       />
       {isModalTaskActive && (
         <CreateTask openTaskModal={openTaskModal} addTasks={addTasks} />

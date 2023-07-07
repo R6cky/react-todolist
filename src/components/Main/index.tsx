@@ -12,6 +12,7 @@ export const Main = ({
   isModalViewActive,
   viewTask,
   taskData,
+  taskComplete,
 }: any) => {
   return (
     <MainStyled>
@@ -26,9 +27,16 @@ export const Main = ({
             <p>+</p>
           </span>
         </div>
-        <select className="select-list" name="" id="">
-          <option value="">Tarefas feitas</option>
-          <option value="">Tarefas pendentes</option>
+        <select
+          onChange={(e) => console.log(e.target.value)}
+          className="select-list"
+          defaultValue={"Todas as Tarefas"}
+          name=""
+          id=""
+        >
+          <option value="Todas as tarefas">Todas as tarefas</option>
+          <option value="Tarefas feitas">Tarefas feitas</option>
+          <option value="Tarefas pendentes">Tarefas pendentes</option>
         </select>
         <div
           className="trash-div"
@@ -45,6 +53,7 @@ export const Main = ({
         isModalViewActive={isModalViewActive}
         viewTask={viewTask}
         taskData={taskData}
+        taskComplete={taskComplete}
       ></TaskList>
     </MainStyled>
   );

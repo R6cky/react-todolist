@@ -4,6 +4,7 @@ export type tTasks = {
   title: string;
   content: string;
   category: string;
+  isDone: boolean;
 };
 
 export interface iTasksWithId extends tTasks {
