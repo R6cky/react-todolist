@@ -7,3 +7,4 @@
 ### Ao clicar no ícone da lixeira o usuário será direcionado para um modal com  uma lista 
 ### das tarefas excluídas, e se quiser, poderá restaurá-las para a lista principal de tarefas. 
 ### Também é possível remover todos os itens da lixeira. 
+### Link vercel: https://react-totolist.vercel.app/
