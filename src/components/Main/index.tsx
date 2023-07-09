@@ -40,10 +40,7 @@ export const Main = ({
         <select
           onChange={(e) => setFilter(e.target.value)}
           className="select-list"
-          defaultValue={"Todas as Tarefas"}
           value={filter}
-          name=""
-          id=""
         >
           <option value="Todas as tarefas">Todas as tarefas</option>
           <option value="Tarefas feitas">Tarefas feitas</option>
