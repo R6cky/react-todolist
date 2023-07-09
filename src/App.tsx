@@ -93,10 +93,8 @@ function App() {
     newTasks.map((task) =>
       task.id === id ? (task.isDone = !task.isDone) : task
     );
-
     setTaskList(newTasks);
   };
-  console.log(filter);
 
   return (
     <div>

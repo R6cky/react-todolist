@@ -24,6 +24,7 @@ export const ViewTaskStyle = styled.div`
     align-items: center;
     padding-bottom: 50px;
     background-color: var(--primary-color);
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 
   .content-Card {
