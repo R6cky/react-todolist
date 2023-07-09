@@ -13,7 +13,17 @@ export const Main = ({
   viewTask,
   taskData,
   taskComplete,
+  filter,
+  setFilter,
 }: any) => {
+  const newTaskListFiltered = taskList.filter((task: any) => {
+    return filter === "Todas as tarefas"
+      ? true
+      : filter === "Tarefas feitas"
+      ? task.isDone
+      : !task.isDone;
+  });
+
   return (
     <MainStyled>
       <Header />
@@ -28,9 +38,10 @@ export const Main = ({
           </span>
         </div>
         <select
-          onChange={(e) => console.log(e.target.value)}
+          onChange={(e) => setFilter(e.target.value)}
           className="select-list"
           defaultValue={"Todas as Tarefas"}
+          value={filter}
           name=""
           id=""
         >
@@ -54,7 +65,9 @@ export const Main = ({
         viewTask={viewTask}
         taskData={taskData}
         taskComplete={taskComplete}
-      ></TaskList>
+        filter={filter}
+        newTaskListFiltered={newTaskListFiltered}
+      />
     </MainStyled>
   );
 };

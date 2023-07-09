@@ -22,6 +22,7 @@ function App() {
   const [taskList, setTaskList] = useState([] as Array<iTasksWithId>);
   const [trashList, setTrashList] = useState([] as Array<iTasksWithId>);
   const [taskData, setTaskData] = useState([] as Array<iTasksWithId>);
+  const [filter, setFilter] = useState("Todas as tarefas");
 
   const openTaskModal = (): void => {
     if (!isModalTaskActive) {
@@ -95,6 +96,7 @@ function App() {
 
     setTaskList(newTasks);
   };
+  console.log(filter);
 
   return (
     <div>
@@ -112,6 +114,8 @@ function App() {
         viewTask={viewTask}
         taskData={taskData}
         taskComplete={taskComplete}
+        filter={filter}
+        setFilter={setFilter}
       />
       {isModalTaskActive && (
         <CreateTask openTaskModal={openTaskModal} addTasks={addTasks} />

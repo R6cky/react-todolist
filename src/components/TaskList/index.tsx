@@ -10,14 +10,16 @@ export const TaskList = ({
   viewTask,
   taskData,
   taskComplete,
+  newTaskListFiltered,
 }: any) => {
   return (
     <TaskListStyled>
       <li className="my-list-title">
         <h2>Minha lista</h2>
       </li>
+
       {taskList.length > 0 ? (
-        taskList.map((task: iTasksWithId) => {
+        newTaskListFiltered.map((task: iTasksWithId) => {
           return (
             <Task
               key={task.id}
