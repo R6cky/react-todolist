@@ -1,5 +1,5 @@
 import { TaskStyled } from "./style";
-import { BsCheck2Circle, BsTrash } from "react-icons/bs";
+import { BsTrash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { ViewTask } from "../../../pages/ViewTask";
 
