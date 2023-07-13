@@ -1,5 +1,5 @@
 import { TaskStyled } from "./style";
-import { BsTrash } from "react-icons/bs";
+import { BsCheck2Circle, BsTrash } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
 import { ViewTask } from "../../../pages/ViewTask";
 
@@ -24,8 +24,7 @@ export const Task = ({
         <div className="input-checkbox">
           <input
             type="checkbox"
-            name=""
-            id=""
+            checked={task.isDone ? true : false}
             onChange={() => taskComplete(task.id)}
           />
         </div>
