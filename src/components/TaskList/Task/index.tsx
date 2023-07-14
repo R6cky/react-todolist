@@ -24,6 +24,8 @@ export const Task = ({
         <div className="input-checkbox">
           <input
             type="checkbox"
+            name=""
+            id=""
             checked={task.isDone ? true : false}
             onChange={() => taskComplete(task.id)}
           />

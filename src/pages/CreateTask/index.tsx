@@ -41,10 +41,7 @@ export const CreateTask = ({ openTaskModal, addTasks }: any) => {
         {errors.content && (
           <span className="error-message">{errors.content.message}</span>
         )}
-        <select {...register("category")} defaultValue="Lazer" name="" id="">
-          {errors.category && (
-            <span className="error-message">{errors.category.message}</span>
-          )}
+        <select {...register("category")} id="">
           <option value="Lazer">Lazer</option>
           <option value="Produtividade">Produtividade</option>
           <option value="Alimentacao">Alimentacao</option>

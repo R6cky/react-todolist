@@ -18,7 +18,7 @@ export const TaskList = ({
         <h2>Minha lista</h2>
       </li>
 
-      {taskList.length > 0 ? (
+      {newTaskListFiltered.length > 0 ? (
         newTaskListFiltered.map((task: iTasksWithId) => {
           return (
             <Task

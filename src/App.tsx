@@ -93,7 +93,6 @@ function App() {
     newTasks.map((task) =>
       task.id === id ? (task.isDone = !task.isDone) : task
     );
-    console.log(newTasks);
     setTaskList(newTasks);
   };
 

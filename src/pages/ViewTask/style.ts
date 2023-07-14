@@ -39,7 +39,7 @@ export const ViewTaskStyle = styled.div`
     gap: 10px;
 
     span {
-      width: 60px;
+      width: 120px;
       max-width: 100%;
       height: 1.5rem;
       border-radius: 4px;
