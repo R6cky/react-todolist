@@ -58,6 +58,14 @@ export const TaskStyled = styled.li`
 
     .task-content {
       color: var(--words-color1);
+      font-size: 0.8rem;
+
+      @media (max-width: 400px) {
+        max-width: 15ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   }
   .task-category {
@@ -75,6 +83,7 @@ export const TaskStyled = styled.li`
     .task-view-icon {
       width: 30px;
       height: 25px;
+      margin: 0 5px;
     }
   }
   .remove-btn {
